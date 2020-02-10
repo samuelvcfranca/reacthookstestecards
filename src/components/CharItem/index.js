@@ -15,12 +15,12 @@ export default function CharItem({ char }) {
 
   function handleExclude(id) {
     const newChars = context.chars.map(chars => {
-      return chars.id === id ? { ...chars } : chars;
+      return { ...chars };
     });
-    console.log(`O valor do id sendo excluido é ${id}`);
+    console.log(`o id excluido é ${id}`);
+    newChars.splice(id - 1, 1);
     console.log(newChars);
     console.log(newChars.length);
-    newChars.splice(id - 1, 1);
     context.setChars(newChars);
   }
 

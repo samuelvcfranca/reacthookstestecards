@@ -10,10 +10,11 @@ export default function CharProvider({ children }) {
   //   const data = await response.json();
 
   //   setChars(data);
-  // }, []);
+  // });
+
   function saveChar(char) {
     const newChar = {
-      id: chars.length + 1,
+      id: chars.length === 0 ? 1 : chars.length + 1,
       name: char.name,
       done: undefined
     };
