@@ -14,9 +14,8 @@ export default function CharProvider({ children }) {
 
   function saveChar(char) {
     const newChar = {
-      id: chars.length === 0 ? 1 : chars.length + 1,
-      name: char.name,
-      done: undefined
+      id: Math.random(),
+      name: char.name
     };
     setChars([...chars, newChar]);
   }

@@ -8,7 +8,7 @@ export default function CharItem({ char }) {
 
   function handleFavorite(id) {
     const newChars = context.chars.map(chars => {
-      return chars.id === id ? { ...chars, favorite: !char.favorite } : chars;
+      return chars.id === id ? { ...chars, favorite: !chars.favorite } : chars;
     });
     context.setChars(newChars);
   }
@@ -17,10 +17,11 @@ export default function CharItem({ char }) {
     const newChars = context.chars.map(chars => {
       return { ...chars };
     });
-    console.log(`o id excluido é ${id}`);
-    newChars.splice(id - 1, 1);
-    console.log(newChars);
-    console.log(newChars.length);
+    function findChar(obj) {
+      return obj.id === id;
+    }
+    const pos = newChars.findIndex(findChar);
+    newChars.splice(pos, 1);
     context.setChars(newChars);
   }
 
