@@ -15,7 +15,8 @@ export default function CharProvider({ children }) {
   function saveChar(char) {
     const newChar = {
       id: Math.random(),
-      name: char.name
+      name:
+        char.name /* deve ser alterado para dataCharName.name, informação vinda da API do StarWars */
     };
     setChars([...chars, newChar]);
   }
