@@ -11,8 +11,8 @@ export default function MainComponent() {
           <p className="lead text-secondary">
             O teste deve funcionar da seguinte maneira, ao clicar em adicionar
             personagem, um modal aparece com um input e um botão submit, ao
-            clicar enviar as informações da API devem aparecer na tela dentro do
-            card. Após isso deve ser possivel favoritar um personagem e excluir.
+            clicar enviar o nome deve aparecer na tela dentro do card. Após isso
+            deve ser possivel favoritar um personagem e excluir.
           </p>
         </div>
         <MainCard />
